@@ -73,9 +73,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       // Padding(padding: EdgeInsets.only(left: 0,right: 40),),
-                      SquareTitle(imagePath: "images/google.png",txthint: "Google  ",),
+                      SquareTitle(imagePath: "images/gimg.png",txthint: "",),
                       const SizedBox(width: 20,),
-                      SquareTitle(imagePath: "images/facebook.png",txthint: "Facebook",),
+                      SquareTitle(imagePath: "images/fimg.png",txthint: "",),
                     ],
                 ),
                  SizedBox(height: 30),
