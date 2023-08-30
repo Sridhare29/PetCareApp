@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:petcare_app/attribute/Dimensions.dart';
 
 class SquareTitle extends StatelessWidget {
   final String imagePath;
@@ -8,20 +9,20 @@ class SquareTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(10),
+      padding: EdgeInsets.all(Dimensions.height10),
       decoration: BoxDecoration(
         border: Border.all(color: const Color.fromARGB(255, 166, 165, 165)),
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(Dimensions.radius16),
         color: Colors.white),
       child: Row(
         children: [
           Image.asset(imagePath,
-          height: 40,),
-          const SizedBox(width: 10), 
+          height: Dimensions.height40,),
+           SizedBox(width: Dimensions.width10), 
           Text(
             txthint,
-            style: const TextStyle(
-              fontSize: 18,
+            style:  TextStyle(
+              fontSize: Dimensions.font18,
               fontWeight: FontWeight.bold,
               color: Colors.blue
             ),
