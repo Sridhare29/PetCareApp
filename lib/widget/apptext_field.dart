@@ -17,14 +17,14 @@ class AppTextField extends StatefulWidget {
 class _AppTextFieldState extends State<AppTextField> {
   Color borderColor = Colors.grey;
   bool hasUserInput = false;
-
+  
   @override
   void initState() {
     super.initState();
 
     // Set the initial state of hasUserInput based on the initial text value
     hasUserInput = widget.textEditingController.text.isNotEmpty;
-    borderColor = hasUserInput ? Color.fromARGB(255, 107, 76, 185) : Colors.grey;
+    borderColor = hasUserInput ?const Color.fromARGB(255, 107, 76, 185) : Colors.grey;
 
     widget.textEditingController.addListener(onInputChanged);
   }
@@ -38,7 +38,7 @@ class _AppTextFieldState extends State<AppTextField> {
   void onInputChanged() {
     setState(() {
       hasUserInput = widget.textEditingController.text.isNotEmpty;
-      borderColor = hasUserInput ? Color.fromARGB(255, 107, 76, 185) : Colors.grey;
+      borderColor = hasUserInput ? const Color.fromARGB(255, 107, 76, 185) : Colors.grey;
     });
   }
 
@@ -46,11 +46,11 @@ class _AppTextFieldState extends State<AppTextField> {
   Widget build(BuildContext context) {
     return Container(
       height: 60,
-      margin: EdgeInsets.only(top: 10, bottom: 20),
-      padding: EdgeInsets.only(left: 30, right: 30),
+      margin: const EdgeInsets.only(top: 10, bottom: 20),
+      padding: const EdgeInsets.only(left: 30, right: 30),
       child: TextField(
         controller: widget.textEditingController,
-        style: TextStyle(color: Color.fromARGB(255, 107, 76, 185)), // Change the user input text color
+        style: const TextStyle(color: Color.fromARGB(255, 107, 76, 185)), // Change the user input text color
         decoration: InputDecoration(
           hintText: widget.hintText,
           hintStyle: TextStyle(color: borderColor), // Change the hint text color

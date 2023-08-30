@@ -1,11 +1,8 @@
-// ignore: implementation_imports
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-// ignore: implementation_imports
 
 import '../attribute/Dimensions.dart';
 
+// ignore: must_be_immutable
 class BigText extends StatelessWidget {
   BigText(
       {super.key,

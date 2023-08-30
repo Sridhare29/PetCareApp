@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:petcare_app/attribute/Dimensions.dart';
 
 import '../widget/apptext_field.dart';
 import '../widget/bigtext_widget.dart';
@@ -22,23 +21,23 @@ class _SignupScreenState extends State<SignupScreen> {
     return Scaffold(
       body: Column(
         children: [
-               SizedBox(height: 20,),
+               SizedBox(height: Dimensions.height20,),
                 Container(
-                    margin:  EdgeInsets.only(top: 80 ,bottom: 20),
-                    padding:  EdgeInsets.only(left: 0,right: 140),
+                    margin:  EdgeInsets.only(top: Dimensions.height80 ,bottom: Dimensions.height20),
+                    padding:  EdgeInsets.only(left: 0,right: Dimensions.height140),
 
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                    BigText(text: "Create New",size: 40,color: Colors.black,),
+                    BigText(text: "Create New",size: Dimensions.height40,color: Colors.black,),
                  
-                    BigText(text: "Account",size: 40,color: Colors.black,),
+                    BigText(text: "Account",size: Dimensions.height40,color: Colors.black,),
 
                   ]),
                 ),
                Container(
-                    margin:  EdgeInsets.only(top: 0,bottom: 20),
-                    padding:  EdgeInsets.only(left: 30,right: 30),
+                    margin:  EdgeInsets.only(top: 0,bottom: Dimensions.height20),
+                    padding:  EdgeInsets.only(left: Dimensions.height30,right: Dimensions.height30),
                     child: Column(
                       // crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
