@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:petcare_app/attribute/Dimensions.dart';
 
 class AppTextField extends StatefulWidget {
   final TextEditingController textEditingController;
@@ -22,7 +23,6 @@ class _AppTextFieldState extends State<AppTextField> {
   void initState() {
     super.initState();
 
-    // Set the initial state of hasUserInput based on the initial text value
     hasUserInput = widget.textEditingController.text.isNotEmpty;
     borderColor = hasUserInput ?const Color.fromARGB(255, 107, 76, 185) : Colors.grey;
 
@@ -45,24 +45,24 @@ class _AppTextFieldState extends State<AppTextField> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 60,
-      margin: const EdgeInsets.only(top: 10, bottom: 20),
-      padding: const EdgeInsets.only(left: 30, right: 30),
+      height: Dimensions.height60,
+      margin: EdgeInsets.only(top: Dimensions.height10, bottom: Dimensions.height20),
+      padding:  EdgeInsets.only(left: Dimensions.height30, right: Dimensions.height30),
       child: TextField(
         controller: widget.textEditingController,
-        style: const TextStyle(color: Color.fromARGB(255, 107, 76, 185)), // Change the user input text color
+        style: const TextStyle(color: Color.fromARGB(255, 107, 76, 185)), 
         decoration: InputDecoration(
           hintText: widget.hintText,
-          hintStyle: TextStyle(color: borderColor), // Change the hint text color
+          hintStyle: TextStyle(color: borderColor), 
           focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: BorderRadius.circular(Dimensions.radius16),
             borderSide: BorderSide(
               width: 1.0,
               color: borderColor,
             ),
           ),
           enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: BorderRadius.circular(Dimensions.radius16),
             borderSide: BorderSide(
               width: 1.0,
               color: borderColor,
